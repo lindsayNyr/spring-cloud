@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.front.ModifierController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <HBox>
+        <Label text="ID du coktails"/>
+        <TextField fx:id="id" text="1"/>
+    </HBox>
+    <HBox>
+        <Label text="Nom du coktails"/>
+        <TextField fx:id="nom" text=""/>
+    </HBox>
+
+    <HBox>
+        <Label text="Ingredients"/>
+        <TextField fx:id="ingredients" text=""/>
+    </HBox>
+
+    <HBox>
+        <Label text="Difficulté"/>
+        <fx:define>
+            <Integer fx:id="min" fx:value="1"/>
+            <Integer fx:id="max" fx:value="5"/>
+        </fx:define>
+        <Spinner min="$min" max="$max" fx:id="difficulte"/>
+    </HBox>
+
+    <Button fx:id="valider" mnemonicParsing="false" onAction="#validerModifier" text="Valider"/>
+
+
+</VBox>
